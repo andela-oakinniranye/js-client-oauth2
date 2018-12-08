@@ -297,7 +297,7 @@ function ClientOAuth2Token (client, data) {
   this.accessToken = data.access_token
   this.refreshToken = data.refresh_token
 
-  this.expiresIn(Number(data.expires_in))
+  this.expiresIn(data.expires_in || 0)
 }
 
 /**
